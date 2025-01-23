@@ -1,0 +1,4 @@
+Welcome to welcome to the events module this is the module responsible for handling the events that are created through fellow.io. We are using Web pack module renovation build Twin and this axis a layer between the House application and this to provide application this handle a lot of the events part of the application
+
+
+Subscribe to calendar feed for four events by using the link HCP local host for 5508/subscribe on Calendar. This will generate a Calendar subscription for the users calendar by using no events search programs and filters to allow various subscriptions of a calendar such as a subset of events, subset of categories.

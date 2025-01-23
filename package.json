@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "npx lerna run build",
+    "events": "nx run-many -t dev -p server events",
+    "generate": "node kiota.js",
+    "dev": "pnpm install && npx lerna run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@nx/eslint": "20.3.0",
+    "@nx/rsbuild": "20.3.0",
+    "eslint": "^9.17.0",
+    "eslint-config-custom": "workspace:*",
+    "lerna": "^8.1.9",
+    "nx": "20.3.0",
+    "prettier": "^3.4.2",
+    "js-yaml" : "*",
+    "bun": "*"
+  },
+  "packageManager": "pnpm@9.15.2",
+  "name": "falah-club",
+  "dependencies": {}
+}
