@@ -2,8 +2,11 @@ name: Build and Release Rust Executable
 
 on:
   push:
-    tags:
-      - 'v*'  # Trigger only on version tags (e.g., v1.0, v2.1.3)
+#    tags:
+#      - 'v*'  # Trigger only on version tags (e.g., v1.0, v2.1.3)
+
+permissions:
+  contents: write  # Ensure permissions to create a release and upload assets
 
 jobs:
   build-and-release:
@@ -27,27 +30,17 @@ jobs:
         cd server
         cargo build --release
 
-    # Step 4: Upload the compiled executable as an artifact
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: server-executable
-        path: server/target/release/server
+    # Step 4: Install GitHub CLI
+    - name: Install GitHub CLI
+      run: sudo apt-get install -y gh
 
-    # Step 5: Download the artifact for release
-    - name: Download Artifact
-      uses: actions/download-artifact@v3
-      with:
-        name: server-executable
-        path: ./artifacts
-
-    # Step 6: Create GitHub Release and attach the artifact
+    # Step 5: Create GitHub Release and attach the artifact
     - name: Create GitHub Release
-      uses: ncipollo/release-action@v1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        tag: ${{ github.ref_name }}
-        name: Release ${{ github.ref_name }}
-        body: |
-          This release includes the compiled Rust executable.
-        files: ./artifacts/server
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        RELEASE_NAME="${{ github.ref_name }}"
+        ASSET_PATH="./server/target/release/server"
+
+        # Create the release and upload the artifact
+        gh release create "$RELEASE_NAME" "$ASSET_PATH" --title "Release $RELEASE_NAME" --notes "This release includes the compiled Rust executable."
