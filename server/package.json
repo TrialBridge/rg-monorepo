@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx nodemon --exec \"cargo run\" ./src/main.rs\n"
+    "dev": "npx nodemon --exec \"cargo run\" ./src/main.rs\n",
+    "prod": "cargo run --release"
+
   },
   "author": "",
   "license": "ISC"
