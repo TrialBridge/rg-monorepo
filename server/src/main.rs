@@ -18,7 +18,6 @@ use crate::html::INDEX_HTML;
 use crate::subscription::ical::generate_ics;
 use crate::subscription::rss::rss;
 use salvo::cors::Cors;
-use salvo::Error;
 use salvo::http::Method;
 
 // Lazy static connection, using Mutex for thread safety
