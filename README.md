@@ -1,4 +1,4 @@
-# Turbo Falah 🚀
+# Turbo trial-bridge (react-group) 🚀
 
 
 dependencies
@@ -28,7 +28,7 @@ pnpm dev
 
 -	Server [Port: 5800]
 
->	OpenAPI Scalar: http://127.0.0.1:5800/scalar
+>	OpenAPI Scalar: http://127.0.0.1:80/scalar
 
 **WEBPACK (RSBUILD)**
 
