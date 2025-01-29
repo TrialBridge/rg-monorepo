@@ -1,5 +1,5 @@
 {
-  "name": "@falah-club/falah",
+  "name": "@TrialBridge/rg-monorepo",
   "version": "3.2.0",
   "description": "npm registry to GitHub Package Registry example.",
   "keywords": [
@@ -7,16 +7,16 @@
     "github",
     "npm"
   ],
-  "homepage": "https://github.com/falah-club/falah",
+  "homepage": "https://github.com/TrialBridge/rg-monorepo",
   "bugs": {
-    "url": "https://github.com/falah-club/falah/issues"
+    "url": "https://github.com/TrialBridge/rg-monorepo/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Turbo/falah.git"
+    "url": "https://github.com/TrialBridge/rg-monorepo.git"
   },
   "license": "MIT",
-  "author": "Falah CLub",
+  "author": "Trial Bridge",
   "files": [
     "bin/",
     "lib/",
