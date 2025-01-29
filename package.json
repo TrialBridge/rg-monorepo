@@ -3,7 +3,7 @@
   "scripts": {
     "build": "npx lerna run build",
     "events": "nx run-many -t dev -p server events",
-    "generate": "node kiota.js",
+    "generate": "node fix-kiota.js",
     "dev": "pnpm install && npx lerna run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""

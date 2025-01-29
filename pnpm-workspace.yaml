@@ -3,7 +3,7 @@ packages:
   - "workshop"
   - "git"
   - "forms"
-  - "apps/*"
+  - "consumer"
   - "kiota"
   - "packages/*"
   - "providers/*"
